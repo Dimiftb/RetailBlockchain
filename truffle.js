@@ -11,7 +11,8 @@
  *     gasPrice: 10000000000,
  *   },
  */
-
+var HDWalletProvider = require("truffle-hdwallet-provider");
+const MNEMONIC = "orbit only away girl hazard embody orchard man guilt arch flower walk";
 module.exports = {
   // See <http://truffleframework.com/docs/advanced/configuration>
   // to customize your Truffle configuration!
@@ -20,6 +21,13 @@ module.exports = {
       host: "127.0.0.1",
       port: 7545,
       network_id: "*" // Match any network id
+    },
+    ropsten: {
+      provider: function() {
+        return new HDWalletProvider(MNEMONIC, "https://ropsten.infura.io/C92VGHRXHIJ2YFG45VCW59S2YIN8WPCBQ6")
+      },
+      network_id: 3,
+      gas: 4000000
     }
   }
 };
