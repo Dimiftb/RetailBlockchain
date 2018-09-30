@@ -51,6 +51,8 @@ contract NFT is ERC721Token, Ownable {
         super._setTokenURI(tokenId, _jsonHash);
 
         metadata[tokenId].copy = _copy;
+
+        
     }
 
     //deposit the _jsonHash to the specific token

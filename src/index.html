@@ -7,27 +7,77 @@
     <title>Title</title>
 </head>
 <body>
-<div id="tokenss" class="tokenInformation">
-<form name="createToken">
-    <label>Title </label><input type="text" name="titleOfToken"><br/>
-    <label>Number of tokens </label><input type="text" name="numberOfTokens"><br/>
-    <label>Description </label><input type="text" name="descriptionOfToken"><br/>
-    <label>Location </label><input type="text" name="locationOfToken"><br/>
-    <label>Price </label><input type="text" name="priceOfToken"><br/>
+<div class="container">
+    <div class="onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked  onclick="changeView()">
+        <label class="onoffswitch-label" for="myonoffswitch">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+        </label>
+    </div>
+    <h1>Retailer limited edition series</h1>
+    <label id="fillAll"></label>
+    <div id="formDiv" >
+<form id="createToken" method="post">
+    <h2> Token release form </h2>
+    <label>Title* </label>
+    <fieldset>
+        <input type="text" id="titleOfToken"><br/>
+    </fieldset>
+    <label>Description </label>
+    <fieldset>
+        <input type="text" id="descriptionOfToken"><br/>
+    </fieldset>
+    <label>Number of tokens* </label>
+    <fieldset>
+        <input type="text" id="numberOfTokens"><br/>
+    </fieldset>
+    <label>Location* </label>
+    <fieldset>
+        <input type="text" id="locationOfToken"><br/>
+    </fieldset>
+    <label>Price* </label>
+    <fieldset>
+        <input type="text" id="priceOfToken"><br/>
+    </fieldset>
     <br/>
     <div id="tokenImg" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-        <p>Drag and drop to upload a token image</p>
+        <p>Drag and drop to upload a token image (optional)</p>
     </div>
     <br/>
-    <input type="button" value="BumBamBam" onclick="hash()">
+    <fieldset>
+        <input class="mybtn" type="button" value="Release" onclick="hash();releaseToken()">
+    </fieldset>
 </form>
+    </div>
+    <div id="listSearches" class="listSearches" style="display: none">
+        <h2> Available tokens</h2>
+        <hr>
+        </br>
+        <table cellspacing="10" id="createTokenTable">
+            <tr>
+                <th>Company </th>
+                <th>Title </th>
+                <th>Location </th>
+                <th>Available </th>
+                <th>Price</th>
+                <th>Buy</th>
+            </tr>
+            <tr>
+                <td>Nike </td>
+                <td>Access to limited edition trainers</td>
+                <td>Europe, USA, Asia</td>
+                <td>5000</td>
+                <td>3000 GBP</td>
+                <td><input class="buy" type="button" value="Buy" onclick="buyTicket()"></td>
+            </tr>
+        </table>
+    </div>
 </div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="web3.min.js"></script>
 <script src="hash.js"></script>
 <script src="bundle.js"></script>
 <script src="dragDropHandler.js"></script>
+<script src="changeView.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

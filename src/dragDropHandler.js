@@ -12,12 +12,16 @@ function dropHandler(ev) {
             // If dropped items aren't files, reject them
             if (ev.dataTransfer.items[i].kind === 'file') {
                 var file = ev.dataTransfer.items[i].getAsFile();
-                console.log(file.name);
                 div.innerHTML = "";
-                var img = document.createElement("img");
-                console.log(file.name);
-                img.src = file.src;
-                div.appendChild(img);
+                var reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onloadend = function() {
+                    var img = document.createElement("img");
+                    img.src = reader.result;
+                    img.setAttribute('id', 'iconImg');
+                    div.appendChild(img);
+                };
+                console.log(file);
             }
         }
     } else {
