@@ -1,26 +1,22 @@
 {
-  "name": "RetailBlockchain",
+  "name": "retailblockchaintruffle",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "openzeppelin-solidity": "^1.12.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.0.0",
+    "chai-bignumber": "^2.0.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/VaniOFX/RetailBlockchain.git"
-  },
-  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/VaniOFX/RetailBlockchain/issues"
-  },
-  "homepage": "https://github.com/VaniOFX/RetailBlockchain#readme",
-  "dependencies": {
-    "global": "^4.3.2",
-    "openzeppelin-solidity": "1.12.0",
-    "truffle": "^4.1.14",
-    "yarn": "^1.10.1"
-  }
+  "license": "ISC"
 }
