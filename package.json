@@ -12,7 +12,8 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-as-promised": "^7.0.0",
-    "chai-bignumber": "^2.0.2"
+    "chai-bignumber": "^2.0.2",
+    "ganache-cli": "^6.1.8"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
