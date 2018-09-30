@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="tokens.css">
+    <title>Title</title>
+</head>
+<body>
+<div id="tokenss" class="tokenInformation">
+<form name="createToken">
+    <label>Title </label><input type="text" name="titleOfToken"><br/>
+    <label>Number of tokens </label><input type="text" name="numberOfTokens"><br/>
+    <label>Description </label><input type="text" name="descriptionOfToken"><br/>
+    <label>Location </label><input type="text" name="locationOfToken"><br/>
+    <label>Price </label><input type="text" name="priceOfToken"><br/>
+    <br/>
+    <div id="tokenImg" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+        <p>Drag and drop to upload a token image</p>
+    </div>
+    <br/>
+    <input type="button" value="BumBamBam" onclick="hash()">
+</form>
+</div>
+
+<script src="hash.js"></script>
+<script src="bundle.js"></script>
+<script src="dragDropHandler.js"></script>
+</body>
+</html>

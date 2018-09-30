@@ -1,0 +1,9 @@
+.listSearches table, th, td{
+    border: 1.5px solid blue;
+    border-bottom: 1.5px solid black;
+    border-top: 1.5px solid black;
+    border-right: 1.5px solid black;
+    border-left: 1.5px solid black;
+}
+
+.listSearches th {}
